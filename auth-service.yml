@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: auth-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/authdb
+    username: postgres
+    password: admin123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: vgraghu@gmail.com
+    password: jpmk trii uqpp gbin
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true  
+          ssl:
+            trust: "*"
+
+server:
+  port: 8082  
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+      
+jwt:
+  secret: y6Xk9v2yM9m4Gf1mA8pQ0JxCk6f9Q2wE1Rr7Zx0M5A8=
+  expiration: 3600000   # 1 hour (ms)
