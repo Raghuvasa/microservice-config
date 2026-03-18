@@ -48,3 +48,7 @@ management:
   metrics:
     tags:
       application: auth-service
+
+logging:
+  file:
+    name: logs/auth-service.log
