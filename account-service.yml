@@ -28,8 +28,10 @@ management:
   endpoints:
     web:
       exposure:
-        include: prometheus,health,info
-
+        include: info,health,metrics,prometheus
+  endpoint:
+    health:
+      show-details: always
   metrics:
     tags:
       application: account-service   # change per service
