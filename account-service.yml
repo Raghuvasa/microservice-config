@@ -23,3 +23,13 @@ eureka:
 jwt:
   secret: y6Xk9v2yM9m4Gf1mA8pQ0JxCk6f9Q2wE1Rr7Zx0M5A8=
   expiration: 3600000   # 1 hour (ms)	
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: prometheus,health,info
+
+  metrics:
+    tags:
+      application: account-service   # change per service
